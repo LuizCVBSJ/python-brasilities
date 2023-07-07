@@ -1,5 +1,8 @@
-from validate_docbr import CPF
+from cpf_cnpj import Document
 
-cpf = CPF()
+cnpj = Document.create_document(13347016000117)
 
-print(cpf.validate("41595369805"))
+cpf = Document.create_document(41595369805)
+
+print(cpf)
+print(cnpj)
