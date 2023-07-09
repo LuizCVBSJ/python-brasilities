@@ -1,8 +1,8 @@
-from cpf_cnpj import Document
+from phone_list_br import PhoneListBr
 
-cnpj = Document.create_document(13347016000117)
+text = "I like the phone number 551296221117 and the number 551197789877 but I think the number 125186248 is not really" \
+       "a phone number"
 
-cpf = Document.create_document(41595369805)
+phone_list = PhoneListBr(text)
 
-print(cpf)
-print(cnpj)
+print(phone_list)
