@@ -15,7 +15,7 @@ class PhoneListBr:
 
     @staticmethod
     def phone_search(number):
-        pattern = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+        pattern = "(\d{2,3})?(\d{2})(\d{4,5})(\d{4})"
         search = re.search(pattern, number)
         return search
 
@@ -23,12 +23,11 @@ class PhoneListBr:
     def format_phone_number(number):
         search = PhoneListBr.phone_search(number)
         if search.group(1):
-            answer = ("+{}({})9{}-{}".format(
-                search.group(1),
-                search.group(2),
-                search.group(3),
-                search.group(4)
-            ))
+            answer = "+{}({})9{}-{}".format(
+                search.group(1), search.group(2), search.group(3), search.group(4)
+            )
         else:
-            answer = ("({})9{}-{}".format(search.group(2), search.group(3), search.group(4)))
+            answer = "({})9{}-{}".format(
+                search.group(2), search.group(3), search.group(4)
+            )
         return answer
