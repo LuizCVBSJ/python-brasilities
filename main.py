@@ -6,6 +6,5 @@ text = (
 )
 print(text)
 phone_list = PhoneListBr(text)
-
 print(phone_list)
 print(phone_list.phone_list)
