@@ -1,5 +1,5 @@
-from datetime import datetime, timedelta
-from dates_br import DatesBR
+from cep_access import AdressSearch
 
-today = DatesBR()
-print(today.register_time())
+cep1 = AdressSearch("11696036")
+
+print(cep1)
